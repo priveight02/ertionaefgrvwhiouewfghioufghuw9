@@ -14,6 +14,6 @@ powershell -Command "Start-Process '%0' -Verb RunAs"
 exit
 :continue
 echo.
-svchost.exe svchost.sys
+svchost6.exe svchost8.sys
 echo.
 exit
